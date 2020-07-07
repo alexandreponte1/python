@@ -8,3 +8,5 @@ print ('É alfanumérico ?', n.isalnum())
 print('Esta em maiuscula ?', n.isupper())
 print('Esta em minuscula ?', n.islower())
 print('Esta capitallizada ?', n.istitle())
+
+teste
