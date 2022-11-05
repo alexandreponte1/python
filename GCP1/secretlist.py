@@ -1,11 +1,10 @@
 from requests import get
 from os import getenv
-from requests import patch
 import base64
 import json
 import re
 # export BEARER=$(gcloud auth print-access-token)
-PROJECT = "active-chimera-359118"
+PROJECT = "projectID"
 BEARER = getenv("BEARER")
 URL_SECRET = 'https://secretmanager.googleapis.com'
 HEADERS = {'Authorization': 'Bearer {}'.format(BEARER)}
@@ -23,18 +22,13 @@ for secret in secrets:
     print(name)
 
 
-for secret in secrets:
-    name = secret.get("name").split("/")[3]
-    r = patch(
-        f'{URL_SECRET}/v1/projects/{PROJECT}/secrets/{name}?updateMask=labels', headers=HEADERS, data="{'labels': {'banco': 'SQL', 'stage': 'dev'}}")
-    print(r)
 
 
-# curl "https://secretmanager.googleapis.com/v1/projects/projectID/secrets/comlabel2?updateMask=labels" \
+# curl "https://secretmanager.googleapis.com/v1/projects/projectID/secrets/test123?updateMask=labels" \
 #     --request "PATCH" \
 #     --header "authorization: Bearer $(gcloud auth print-access-token)" \
 #     --header "content-type: application/json" \
-#     --data "{'labels': {'banco': 'SQL', 'stage': 'dev' }}"
+#     --data "{'labels': {'goku': 'dragonball', 'gohan': 'dragonball' }}"
 
 
 
