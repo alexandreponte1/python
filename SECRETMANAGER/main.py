@@ -2,10 +2,10 @@
 from google.cloud import secretmanager
 
 # GCP project in which to store secrets in Secret Manager.
-project_id = "projectID"
+project_id = "numeroDoProjeto"
 
 # ID of the secret to create.
-secret_id = "goku"
+secret_id = "pontesIndestrutiveis"
 
 # Create the Secret Manager client.
 secretmanager_client = secretmanager.SecretManagerServiceClient()
