@@ -28,10 +28,10 @@ pool = sqlalchemy.create_engine(
 )
 # connect to connection pool
 with pool.connect() as db_conn:
-     results = db_conn.execute("SELECT * FROM mysql.user WHERE user = 'myuser'")
-    #  results = db_conn.execute("UPDATE mysql.user SET Password=PASSWORD('robin123') WHERE USER='alexandre'")
-     for row in results:
-        print(row)
+     results = db_conn.execute("SET PASSWORD FOR logan = 'alexandre'")
+     print (results)
+    #  for row in results:
+    #     print(row)
 connector.close()
 
 
