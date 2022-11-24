@@ -1,17 +1,17 @@
 from google.cloud.sql.connector import Connector
 import sqlalchemy
-project_id = "demo-project"
+project_id = "hopeful-summer-368213"
 region = "us-central1"
-instance_name = "demo-instance"
+instance_name = "bancodedados"
+#hopeful-summer-368213:us-central1:bancodedados
 INSTANCE_CONNECTION_NAME = f"{project_id}:{region}:{instance_name}" # i.e demo-project:us-central1:demo-instance
 print(f"Your instance connection name is: {INSTANCE_CONNECTION_NAME}")
 DB_USER = "root"
-DB_PASS = "password"
-# DB_NAME = "information_schema"
-
+DB_PASS = "senha"
+SENHA = "novasenha"
 
 connector = Connector()
-# function to return the database connection object
+
 def getconn():
     conn = connector.connect(
         INSTANCE_CONNECTION_NAME,
@@ -28,12 +28,16 @@ pool = sqlalchemy.create_engine(
 )
 # connect to connection pool
 with pool.connect() as db_conn:
-     results = db_conn.execute("SET PASSWORD FOR logan = 'alexandre'")
+     results = db_conn.execute(f"SET PASSWORD FOR logan = '{SENHA}'")
      print (results)
-    #  for row in results:
-    #     print(row)
+
 connector.close()
 
 
 
 
+
+
+# pip install cloud-sql-python-connector
+# sqlalchemy
+# pymysql
