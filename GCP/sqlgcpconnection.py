@@ -3,7 +3,7 @@ import sqlalchemy
 project_id = "hopeful-summer-368213"
 region = "us-central1"
 instance_name = "bancodedados"
-#hopeful-summer-368213:us-central1:bancodedados
+
 INSTANCE_CONNECTION_NAME = f"{project_id}:{region}:{instance_name}" # i.e demo-project:us-central1:demo-instance
 print(f"Your instance connection name is: {INSTANCE_CONNECTION_NAME}")
 DB_USER = "root"
