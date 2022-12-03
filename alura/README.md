@@ -2,3 +2,8 @@ https://github.com/alura-cursos/Curso-Python-3-parte-1-Introdu-o-nova-vers-o-da-
 
 https://github.com/alura-cursos/Curso-Python-3-parte-1-Introdu-o-nova-vers-o-da-linguagem/archive/capitulo4.zip
 
+
+
+
+
+
