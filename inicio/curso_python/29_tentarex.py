@@ -8,9 +8,9 @@ numero_str = input(
 )
 
 try:
-    numero_float = float(numero_str)
+    numero_float = float(numero_str) #converte o numero para float
     print('FLOAT:', numero_float)
-    print(f'O dobro de {numero_str} é {numero_float * 2:.2f}')
+    print(f'O dobro de {numero_str} é {numero_float * 2:.2f}')# 2f casas decimais
 except:
     print('Isso não é um número')
 
