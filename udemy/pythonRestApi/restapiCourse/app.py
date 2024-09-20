@@ -1,5 +1,5 @@
 import uuid
-from flask import Flask, request
+from flask import Flask, request, render_template
 from db import items, stores
 
 app = Flask(__name__)
@@ -86,6 +86,11 @@ def get_all_items():
 
 
 
-@app.get("/") #http://127.0.0.1:5000/store
-def get_goku():
-    return goku
+# @app.get("/") #http://127.0.0.1:5000/store
+# def get_goku():
+#     return goku
+
+
+@app.get("/")
+def get_index():
+    return render_template("index.html")
