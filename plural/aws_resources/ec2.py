@@ -21,12 +21,17 @@ ec2_client = boto3.client(
 
 
 
-response = ec2_client.run_instances(
-    ImageId ="ami-0ebfd941bbafe70c6",
-    InstanceType="t2.micro",
-    KeyName="goku123",
-    MinCount=1,
-    MaxCount=1
-)
+# response = ec2_client.run_instances(
+#     ImageId ="ami-0ebfd941bbafe70c6",
+#     InstanceType="t2.micro",
+#     KeyName="goku123",
+#     MinCount=1,
+#     MaxCount=1
+# )
 
-print(response)
+# print(response)
+
+
+
+for ec2 in ec2_client.describe_instances():
+    print(ec2)
