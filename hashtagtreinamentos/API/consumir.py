@@ -8,7 +8,7 @@ print(requisicao.json())
 
 dicionario = requisicao.json()
 
-print(dicionario['total_vendas'])
+print(dicionario['total_vendas']) 
 
 
 

@@ -4,7 +4,7 @@ aws_access_key = ""
 aws_secret_key = ""
 aws_region = "us-east-1"
 
-bucket_name = "ps-course-test-bucket-gokuuuuuiiiooou"
+bucket_name = "ps-course-test-bucket-goku123"
 
 s3_client = boto3.client(
     "s3",
@@ -29,4 +29,4 @@ def delete_s3_bucket(bucket_name):
     print(f"S3 Bucket '{bucket_name}' deleted successfully")
 
 if __name__ == "__main__":
-    delete_s3_bucket(bucket_name)
+    create_s3_bucket(bucket_name)
