@@ -12,3 +12,7 @@ result3 = abs(-7)
 print(result3)
 
 #https://github.com/iam-veeramalla/python-for-devops/tree/main/Day-02/examples
+
+
+
+# for i in `ls`; do python $i; done
