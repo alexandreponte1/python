@@ -12,3 +12,10 @@ create python function with gcloud
 
 python -m venv .venv
 source .venv/bin/activate
+pip install requests
+
+
+Api para testes 
+http://open-notify.org/
+http://api.open-notify.org/astros.json
+https://jsonplaceholder.typicode.com/todos/1
