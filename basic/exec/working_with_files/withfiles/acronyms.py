@@ -1,28 +1,42 @@
-# file = open('software_acronyms.txt')
-# try:
-#     # do file operations here
-#     pass
-# finally:
-#     file.close()
-# #
 
-# with open('acronyms.txt') as file:
-#     result = file.readlines()
-#     for line in result:
-#         print(line)
- 
-look_up = input("What software acronym would you like to look up?\n")
-found = False
-with open('acronyms.txt') as file:
-    for line in file:
-        if look_up in line:
-            print(line)
-            found = True
-            break
-if not found:
-    print('The acronym does not exist')
+
+def find_acronym():
+    look_up = input("What software acronym would you like to look up?\n")
+    found = False
+    try:
+        with open('acronyms.txt') as file:
+            for line in file:
+                if look_up in line:
+                    print(line)
+                    found = True
+                    break
+        if not found:
+            print('The acronym does not exist')
+    except FileNotFoundError as e:
+        print('File not found')
+        return False
 
  
+def add_acronym():
+    acronym = input('What acronym do you want to add?\n')
+    definition = input('What is the definition?\n')
+    with open('acronyms.txt', 'a') as file:
+        file.write(acronym + ' - ' + definition + '\n')
+
+
+
+def main():
+    # Perguntar para o usuário se ele quer achar ou adicionar um acronym
+    choice = input('Do you want to find(F) or add(A) an acronym?\n')
+    if choice == 'F':
+        find_acronym()
+    elif choice == 'A':
+        add_acronym()
+
+
+if __name__ == "__main__":
+    main()
+
 
 
 
